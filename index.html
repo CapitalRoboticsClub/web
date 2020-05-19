@@ -1,14 +1,351 @@
 <!DOCTYPE html>
+<html lang="en">
+<title>Capital Robotics Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<html>
-<img src="pic/CRC_Logo.png" alt="CRC Logo" style="width:200px;height:200px;">
+<head>
+<link rel="stylesheet" type="text/css" href="css/web1.css">
+<link rel="stylesheet" type="text/css" href="css/w3.css">
+</head>
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+</style>
+
 <body>
 
-<h1>Capital Robotics Club</h1>
-<p>Welcome! Home to </p>
-<p> ~ Vex IQ team 999A Rising Phoenix G-nius </p>
-<p> ~ VRC team 99909A Rising Phoenix </p>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding"  id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" id="a_1d6f_0">Close Menu</a>
+  <div class="w3-container">
+    <img src="pic/CRC_Logo.png" alt="CRC Logo" style="width:100px;height:100px;">
+    <h3 class="w3-padding-16"><b>Capital Robotics<br>Club</b></h3>
+  </div>
+  <div>
+    <a href="https://www.facebook.com/vex999a/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/CapitalRobotics" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/channel/UCCIQ4pbDeBr2u1onkNDHK5w" class="fa fa-youtube"></a>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#VRC99909A" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">VRC99909A</a> 
+    <a href="#VEXIQ999A" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">VEXIQ999A</a> 
+    <a href="#Outreach" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Outreach Programs</a> 
+    <a href="#STEMBlog" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">STEM Blog</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
 
- <a href="https://github.com/CapitalRoboticsClub">Visit our Github Repository</a> 
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">&#9776;</a>
+  <span>Capital Robotics Club</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()"  title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" id="div_1d6f_0">
+
+  <!-- Header -->
+  <div class="w3-container">
+    <h1 class="w3-jumbo w3-text-black"><b>Robotics Home to:</b></h1>
+    <ul>
+    <li style="list-style-type:square"><a href="#VRC99909A" class="w3-xxxlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></a></li>
+    <li style="list-style-type:square"><a href="#VEXIQ999A" class="w3-xxxlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></a></li>
+    </ul>
+    <h1 class="w3-xlarge w3-text-black"><b>robotics teams in the nation's capital area.</b></h1>
+    <br></br>
+  </div>
+
+
+  <div class="w3-container"  id="VRC99909A">
+    <h1 class="w3-xxxlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></h1>
+    <hr id="hr_1d6f_0" class="w3-round">
+    <p>VRC99909A started in the VEX IQ program in 2016. Team made transition to High School VRC in 2019.
+    </p>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <figure>
+      <img src="pic/vrc99909a_state_2019.jpg" id="img_1d6f_0" onclick="onClick(this)" alt="2019 Virginia State">
+      <br></br>
+      <figcaption>2019 Virginia State Champion</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_state_2018.jpg" id="img_1d6f_1" onclick="onClick(this)" alt="2018 Virginia State">
+      <br></br>
+      <figcaption>2018 Virginia State Champion</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_state_2017.jpg" id="img_1d6f_2" onclick="onClick(this)" alt="2017 Virginia State">
+      <br></br>
+      <figcaption>2017 Virginia State - Robot Skill Award</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_state_2016.jpg" id="img_1d6f_3" onclick="onClick(this)" alt="2016 Virginia State">
+      <br></br>
+      <figcaption>2016 Virginia State Champion</figcaption>
+      </figure>
+    </div>
+
+    <div class="w3-half">
+      <figure>
+      <img src="pic/vrc99909a_world_2019.jpg" id="img_1d6f_4" onclick="onClick(this)" alt="2019 VEX World">
+      <br></br>
+      <figcaption>2019 VEX World - Create Award</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_world_2018.jpg" id="img_1d6f_5" onclick="onClick(this)" alt="2019 VEX World">
+      <br></br>
+      <figcaption>2018 VEX World - Design Award</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_world_2017.jpg" id="img_1d6f_6" onclick="onClick(this)" alt="2019 VEX World">
+      <br></br>
+      <figcaption>2017 VEX World Champion</figcaption>
+      </figure>
+      <figure>
+      <img src="pic/vrc99909a_world_2016.jpg" id="img_1d6f_7" onclick="onClick(this)" alt="2019 VEX World">
+      <br></br>
+      <figcaption>2016 VEX World - Design Award</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black"  onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+
+  <!-- VEXIQ999A -->
+  <div class="w3-container" id="VEXIQ999A" >
+    <h1 class="w3-xxxlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></h1>
+    <hr id="hr_1d6f_1" class="w3-round">
+    <p>VEXIQ999A G-nius team started in 2019. We are a proud all-girls robotics team. 
+    </p>
+    <p>We won 2020 Virginia State Championship in our first year!</p>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <figure>
+      <img src="pic/vexiq999a_state_2020.jpg" id="img_1d6f_8" onclick="onClick(this)" alt="2020 Virginia State">
+      <br></br>
+      <figcaption>2020 Virginia State Champion</figcaption>
+      </figure>
+    </div>
+
+    <div class="w3-half">
+      <figure>
+      <img src="pic/vexiq999a_world_2020.jpg" id="img_1d6f_8" onclick="onClick(this)" alt="2020 VEX World">
+      <br></br>
+      <figcaption>2020 Virtual VEX World</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black"  onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Outreach -->
+  <div class="w3-container" id="Outreach" >
+    <h1 class="w3-xxxlarge w3-text-green"><b>Community Outreach Programs</b></h1>
+    <hr id="hr_1d6f_2" class="w3-round">
+    <p>The best team in the world.</p>
+    <p> We have benefit so much from the robotics community and would like to give back as much as we can.
+    </p>
+    <p><b>Partnership with local/regional/national education organizations to bring robotics to as many kids as possible.</b>:</p>
+  </div>
+
+  <!-- Programs -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" alt="John" id="img_1d6f_20">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" id="img_1d6f_21">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" alt="Mike" id="img_1d6f_22">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEM Blog -->
+  <div class="w3-container" id="STEMBlog" >
+    <h1 class="w3-xxxlarge w3-text-green"><b>STEM Blog</b></h1>
+    <hr id="hr_1d6f_3" class="w3-round">
+    <p>STEM Blog starts here</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-green w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-green w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" >
+    <h1 class="w3-xxxlarge w3-text-green"><b>Contact</b></h1>
+    <hr id="hr_1d6f_4" class="w3-round">
+    <p>Do you want to learn more about robotics and STEM? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <!-- 
+    <form action="/action_page.php" target="_blank">
+    -->
+    <form action="mailto:dreampeople@yahoo.com">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-green w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<div class="footer__info footer__info-social-media">
+  <a class="fa fa-twitter" href="https://twitter.com/canto">Twitter</a>
+  <a class="fa fa-linkedin-square" href="https://www.linkedin.com/company/canto">LinkedIn</a>
+  <a class="fa fa-facebook" href="https://www.facebook.com/CantoDAM">Facebook</a>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
 </body>
 </html>
