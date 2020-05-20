@@ -10,8 +10,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
-<link rel="stylesheet" type="text/css" href="css/web1.css">
+//include *.css files
+<link rel="stylesheet" type="text/css" href="css/CRC.css">
 <link rel="stylesheet" type="text/css" href="css/w3.css">
+//include *.js files
+<script type="text/javascript" src="scripts/CRC.js"></script>
 </head>
 
 <style>
@@ -89,18 +92,17 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container">
-    <h1 class="w3-jumbo w3-text-black"><b>Robotics Home to:</b></h1>
+    <h1 class="w3-xxlarge w3-text-black"><b>Robotics Home to:</b></h1>
     <ul>
-    <li style="list-style-type:square"><a href="#VRC99909A" class="w3-xxxlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></a></li>
-    <li style="list-style-type:square"><a href="#VEXIQ999A" class="w3-xxxlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></a></li>
+    <li style="list-style-type:square"><a href="#VRC99909A" class="w3-xlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></a></li>
+    <li style="list-style-type:square"><a href="#VEXIQ999A" class="w3-xlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></a></li>
     </ul>
     <h1 class="w3-xlarge w3-text-black"><b>robotics teams in the nation's capital area.</b></h1>
-    <br></br>
   </div>
 
 
   <div class="w3-container"  id="VRC99909A">
-    <h1 class="w3-xxxlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></h1>
+    <h1 class="w3-xlarge w3-text-green"><b>VRC 99909A - Rising Phoenix</b></h1>
     <hr id="hr_1d6f_0" class="w3-round">
     <p>VRC99909A started in the VEX IQ program in 2016. Team made transition to High School VRC in 2019.
     </p>
@@ -168,7 +170,7 @@ body {font-size:16px;}
 
   <!-- VEXIQ999A -->
   <div class="w3-container" id="VEXIQ999A" >
-    <h1 class="w3-xxxlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></h1>
+    <h1 class="w3-xlarge w3-text-green"><b>VexIQ 999A - Rising Phoenix G-nius</b></h1>
     <hr id="hr_1d6f_1" class="w3-round">
     <p>VEXIQ999A G-nius team started in 2019. We are a proud all-girls robotics team. 
     </p>
@@ -205,7 +207,7 @@ body {font-size:16px;}
 
   <!-- Outreach -->
   <div class="w3-container" id="Outreach" >
-    <h1 class="w3-xxxlarge w3-text-green"><b>Community Outreach Programs</b></h1>
+    <h1 class="w3-xlarge w3-text-green"><b>Community Outreach Programs</b></h1>
     <hr id="hr_1d6f_2" class="w3-round">
     <p>The best team in the world.</p>
     <p> We have benefit so much from the robotics community and would like to give back as much as we can.
@@ -249,7 +251,7 @@ body {font-size:16px;}
 
   <!-- STEM Blog -->
   <div class="w3-container" id="STEMBlog" >
-    <h1 class="w3-xxxlarge w3-text-green"><b>STEM Blog</b></h1>
+    <h1 class="w3-xlarge w3-text-green"><b>STEM Blog</b></h1>
     <hr id="hr_1d6f_3" class="w3-round">
     <p>STEM Blog starts here</p>
   </div>
@@ -294,7 +296,7 @@ body {font-size:16px;}
   
   <!-- Contact -->
   <div class="w3-container" id="contact" >
-    <h1 class="w3-xxxlarge w3-text-green"><b>Contact</b></h1>
+    <h1 class="w3-xlarge w3-text-green"><b>Contact</b></h1>
     <hr id="hr_1d6f_4" class="w3-round">
     <p>Do you want to learn more about robotics and STEM? Fill out the form and fill me in with the details :) We love meeting new people!</p>
     <!-- 
@@ -327,24 +329,7 @@ body {font-size:16px;}
 </div>
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+//internal JavaScript goes here!
 </script>
 
 </body>
