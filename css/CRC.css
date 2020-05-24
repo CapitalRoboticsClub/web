@@ -40,3 +40,18 @@ figure {
   margin: 5.0em;
   padding: .05em;
 }
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
