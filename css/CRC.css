@@ -42,7 +42,7 @@ figure {
 }
 
 /* unvisited link */
-a:link {
+a:unvisited {
   color: red;
 }
 
