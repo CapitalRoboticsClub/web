@@ -13,6 +13,7 @@
 //include *.css files
 <link rel="stylesheet" type="text/css" href="css/CRC.css">
 <link rel="stylesheet" type="text/css" href="css/w3.css">
+<link rel="stylesheet" type="text/css" href="css/gallery.css">
 //include *.js files
 <script type="text/javascript" src="scripts/CRC.js"></script>
 </head>
@@ -76,6 +77,7 @@ body {font-size:16px;}
     <a href="#VRC99909A" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">VRC99909A</a> 
     <a href="#VEXIQ999A" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">VEXIQ999A</a> 
     <a href="#Outreach" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Outreach</a> 
+    <a href="#Gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Robot Gallery</a> 
     <a href="#STEMBlog" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">STEM Blog</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
   </div>
@@ -323,6 +325,68 @@ body {font-size:16px;}
     </div>
   </div>
 
+ <!-- Robot Gallery -->
+  <div class="w3-container" id="Gallery" >
+    <h1 class="w3-xlarge w3-text-green"><b>Robot Gallery</b></h1>
+    <hr id="hr_1d6f_3" class="w3-round">
+  </div>
+
+  <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="pic/999A1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="pic/999A2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="pic/999A3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="pic/999A4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="pic/999A5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="pic/999A6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="pic/999A1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Fat Turkey">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pic/999A2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Land Slide">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pic/999A3.jpg" style="width:100%" onclick="currentSlide(3)" alt="999A3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pic/999A4.jpg" style="width:100%" onclick="currentSlide(4)" alt="999A4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pic/999A5.jpg" style="width:100%" onclick="currentSlide(5)" alt="999A5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="pic/999A6.jpg" style="width:100%" onclick="currentSlide(6)" alt="999A6">
+    </div>
+  </div>
+  </div>
+  <br></br>
   <!-- STEM Blog -->
   <div class="w3-container" id="STEMBlog" >
     <h1 class="w3-xlarge w3-text-green"><b>STEM Blog</b></h1>
@@ -361,7 +425,34 @@ body {font-size:16px;}
 
 
 <script>
-//internal JavaScript goes here!
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 </script>
 
 </body>
