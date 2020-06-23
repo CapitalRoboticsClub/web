@@ -31,6 +31,12 @@
 #contact{margin-top:75px}
 #hr_1d6f_4{width:50px;border:5px solid red}
 #div_1d6f_1{margin-top:75px;padding-right:58px}
+
+img {
+  display: inline-block;
+  margin: 25px 10px;
+}
+
 figure {
   float: left;
   width: 100%;
