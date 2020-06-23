@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Capital Robotics Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/qrcode.js"></script>
+
+<!-- add icon link -->
+<link rel = "icon" href = "pic/CRC_Logo.png" type = "image/x-icon"> 
+
+</head>
+
+<body>
+<img src="pic/CRC_Logo.png" alt="CRC Logo" style="width:150px;height:150px;">
+
+<p>QR Code Generator</p>
+<input id="qrtext" type="text" onfocus="focusFunc(this)" value="Enter the text that you want to encode in the QR Code here." style="width:80%"><br />
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px"></div> <br />
+
+<button onclick="makeCodeNow()">Click here to see your QR Code</button>
+<p>(Note: Right click on QR Code to save as PNG image)</p>
+
+<script>
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 100,
+	height : 100
+});
+
+function makeCodeNow () {		
+	var elText = document.getElementById("qrtext");
+	var y = document.getElementById("qrcode");
+	
+	if (!elText.value) {
+		alert("Input a text");
+		elText.focus();
+		return;
+	}
+	
+	qrcode.makeCode(elText.value);
+	y.style.display = "block"
+}
+
+function focusFunc(x) {
+	var y = document.getElementById("qrcode");
+	y.style.display = "none"
+	x.value = '';
+}
+
+</script>
+</body>
