@@ -1,21 +1,10 @@
 {
-  "name": "wss-chat",
-  "version": "1.0.0",
-  "description": "simple wss-chat app",
-  "main": "server.js",
-  "scripts": {
-    "test": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git"
-  },
-  "keywords": [
-    "none"
-  ],
-  "author": "Yun",
-  "license": "ISC",
-  "dependencies": {
-    "ws": "^7.4.6"
-  }
+    "name": "websocket-chat",
+    "version": "0.0.1",
+    "description": "chat room implemented with websocket",
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "^2.2.0",
+        "ws": "^7.4.6"
+    }
 }

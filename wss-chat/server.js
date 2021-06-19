@@ -1,20 +1,34 @@
-const WebSocket = require('ws');
+// https://yudhajitadhikary.medium.com/creating-chat-application-using-express-and-websockets-ed567339c4d5
 
-// starts server instance on http://localhost:6000
-const wss = new WebSocket.Server({ port: 6000 });
+//import express server module
+var express = require('express');
+//import socket.io
+var socket = require('socket.io');
 
-// waits for connection to be established from the client
-// the callback argument ws is a unique for each client
-wss.on('connection', (ws) => {
+//App setup
+//create an instance of express server
+var app = express();
+var server = app.listen(4000, function(){
+    console.log('listening for requests on port 4000,');
+});
 
-  // runs a callback on message event
-  ws.on('message', (data) => {
+//server static files in public folder
+app.use(express.static('public'));
 
-    // sends the data to all connected clients
-    wss.clients.forEach((client) => {
-        if (client.readyState === WebSocket.OPEN) {
-          client.send(data);
-        }
+//socket setup and pass server
+var io = socket(server);
+
+io.on('connection', (socket) => {
+    console.log('made socket connection', socket.id);
+
+    //handle chat event
+    socket.on('chat', function(data){
+        //console.log(data);
+        io.sockets.emit('chat', data);
     });
-  });
+
+    //handle typing event
+    socket.on('typing', function(data){
+        socket.broadcast.emit('typing', data);
+    });
 });
