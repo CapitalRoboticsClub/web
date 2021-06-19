@@ -1,4 +1,4 @@
-const connection = new WebSocket('ws://' + location.host + '/ws');
+const connection = new WebSocket("ws://www.capitalroboticsclub.com/ws");
 const button = document.querySelector("#send");
 
 connection.onopen = (event) => {
