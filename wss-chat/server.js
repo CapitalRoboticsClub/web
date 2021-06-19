@@ -8,8 +8,8 @@ var socket = require('socket.io');
 //App setup
 //create an instance of express server
 var app = express();
-var server = app.listen(4000, function(){
-    console.log('listening for requests on port 4000,');
+var server = app.listen(8000, function(){
+    console.log('listening for requests on port 8000,');
 });
 
 //server static files in public folder
