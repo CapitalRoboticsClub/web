@@ -1,4 +1,4 @@
-const connection = new WebSocket("ws://www.CapitalRoboticsClub.com/node");
+const connection = new WebSocket("ws://www.CapitalRoboticsClub.com:6000");
 const button = document.querySelector("#send");
 
 connection.onopen = (event) => {
