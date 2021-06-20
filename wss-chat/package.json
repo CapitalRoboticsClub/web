@@ -1,10 +1,9 @@
 {
-    "name": "websocket-chat",
+    "name": "socket-io-chat",
     "version": "0.0.1",
-    "description": "chat room implemented with websocket",
+    "description": "chat room implemented with socket-io",
     "dependencies": {
         "express": "^4.17.1",
-        "socket.io": "^2.2.0",
-        "ws": "^7.4.6"
+        "socket.io": "^2.2.0"
     }
 }

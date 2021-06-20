@@ -1,34 +1,31 @@
-// https://yudhajitadhikary.medium.com/creating-chat-application-using-express-and-websockets-ed567339c4d5
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-//import express server module
-var express = require('express');
-//import socket.io
-var socket = require('socket.io');
-
-//App setup
-//create an instance of express server
-var app = express();
-var server = app.listen(8000, function(){
-    console.log('listening for requests on port 8000,');
+app.get('/', function(req, res) {
+   res.sendfile('public/index.html');
 });
 
-//server static files in public folder
-app.use(express.static('public'));
+users = [];
+io.on('connection', function(socket) {
+   console.log('A user connected');
+   socket.on('setUsername', function(data) {
+      console.log(data);
+      
+      if(users.indexOf(data) > -1) {
+         socket.emit('userExists', data + ' username is taken! Try some other username.');
+      } else {
+         users.push(data);
+         socket.emit('userSet', {username: data});
+      }
+   });
+   
+   socket.on('msg', function(data) {
+      //Send message to everyone
+      io.sockets.emit('newmsg', data);
+   })
+});
 
-//socket setup and pass server
-var io = socket(server);
-
-io.on('connection', (socket) => {
-    console.log('made socket connection', socket.id);
-
-    //handle chat event
-    socket.on('chat', function(data){
-        //console.log(data);
-        io.sockets.emit('chat', data);
-    });
-
-    //handle typing event
-    socket.on('typing', function(data){
-        socket.broadcast.emit('typing', data);
-    });
+http.listen(3000, function() {
+   console.log('listening on localhost:3000');
 });
