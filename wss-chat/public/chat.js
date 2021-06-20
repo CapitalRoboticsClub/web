@@ -1,6 +1,6 @@
 //make connection with server
 //const socket = io.connect('http://localhost:8000'); //localhost is local to the device where client is on. 
-const socket = io.connect('http://54.227.123.162/node');
+const socket = io.connect('http://54.227.123.162:8000');
 
 //query DOM
 var message = document.getElementById('message'),
